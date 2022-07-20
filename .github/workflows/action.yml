@@ -7,8 +7,7 @@ on:
 jobs:
   cherry_pick_release_v1_0:
     runs-on: ubuntu-latest
-    name: Cherry pick into release-v1.0
-    # if: startsWith(github.event.pull_request.labels.*.name, 'CP v')
+    name: Xealth Auto Cherry Picker
     steps:
       - name: Checkout
         uses: actions/checkout@v2
