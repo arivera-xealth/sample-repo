@@ -1,0 +1,29 @@
+on:
+  pull_request:
+    branches:
+      - main
+    types: ["closed"]
+
+jobs:
+  cherry_pick_release_v1_0:
+    runs-on: ubuntu-latest
+    name: Cherry pick into release-v1.0
+    if: contains(github.event.pull_request.labels.*.name, 'CP v')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Xealth Auto Cherry Pick
+        uses: arivera-xealth/xealth-auto-cherry-pick@v0.0.1
+        with:
+          allowUserToSpecifyBranchViaLabel: 'true'
+          labelCherryPickPattern: 'CP v'
+          userBranchPrefix: 'v'
+          branch: release-v1.0
+          labels: |
+            cherry-pick
+          reviewers: |
+            aReviewerUser
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
