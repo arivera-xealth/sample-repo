@@ -5,10 +5,10 @@ on:
     types: ["closed"]
 
 jobs:
-  cherry_pick_release_v1_0:
+  xealth-auto-cherry-pick:
     runs-on: ubuntu-latest
     name: Xealth Auto Cherry Picker
-    if: github.event.pull_request.merged == 'true'
+    if: github.event.pull_request.merged == true
     steps:
       - name: Checkout
         uses: actions/checkout@v2
