@@ -1,9 +1,10 @@
+name: Auto Cherry Pick
 on:
   pull_request:
     branches:
       - master
     types: ["closed", "labeled"]
-
+ 
 jobs:
   xealth-auto-cherry-pick:
     runs-on: ubuntu-latest
