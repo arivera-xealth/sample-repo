@@ -14,7 +14,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Xealth Auto Cherry Pick
-        uses: arivera-xealth/xealth-auto-cherry-pick@v0.0.62
+        uses: arivera-xealth/xealth-auto-cherry-pick@v1.0.1
         with:
           allowUserToSpecifyBranchViaLabel: 'true'
           labelPatternRequirement: 'CP v'
