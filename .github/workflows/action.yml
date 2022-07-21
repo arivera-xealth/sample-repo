@@ -1,13 +1,14 @@
 on:
   pull_request:
     branches:
-      - main
+      - master
     types: ["closed"]
 
 jobs:
   cherry_pick_release_v1_0:
     runs-on: ubuntu-latest
     name: Xealth Auto Cherry Picker
+    if: github.event.pull_request.merged == 'true'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
