@@ -6,4 +6,4 @@ testing commit
 
 testing
 
-another test
+test
