@@ -10,11 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     name: Xealth Auto Cherry Picker
     if: github.event.pull_request.merged == true
+    permissions:
+      actions: read
+      checks: read
+      pull-requests: write
+      statuses: read
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          path: main
           fetch-depth: 0
       - name: test
         run: ls -la
