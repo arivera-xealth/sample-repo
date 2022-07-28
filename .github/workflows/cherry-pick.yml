@@ -7,13 +7,6 @@ on:
  
 jobs:
   xealth-auto-cherry-pick:
-    permissions:
-      actions: read
-      checks: read
-      pull-requests: write
-      statuses: read
-      contents: write
-      metadata: read
     runs-on: ubuntu-latest
     name: Xealth Auto Cherry Picker
     if: github.event.pull_request.merged == true
