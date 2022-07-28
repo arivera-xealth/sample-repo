@@ -8,7 +8,7 @@ on:
 jobs:
   xealth-auto-cherry-pick:
     permissions:
-      actions: read
+      actions: write
       checks: read
       pull-requests: write
       statuses: read
