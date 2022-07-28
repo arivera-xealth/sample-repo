@@ -20,6 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
+          path: main
           fetch-depth: 0
       - name: Xealth Auto Cherry Pick
         uses: Xealth/cherry-pick-action@v1.0.0
