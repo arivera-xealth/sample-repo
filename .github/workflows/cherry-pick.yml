@@ -7,6 +7,14 @@ on:
  
 jobs:
   xealth-auto-cherry-pick:
+    permissions:
+      actions: write
+      checks: read
+      packages: read
+      pull-requests: write
+      statuses: write
+      contents: write
+      metadata: write
     runs-on: ubuntu-latest
     name: Xealth Auto Cherry Picker
     if: github.event.pull_request.merged == true
@@ -16,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Xealth Auto Cherry Pick
-        uses: arivera-xealth/xealth-auto-cherry-pick@v1.0.3
+        uses: Xealth/cherry-pick-action@v1.0.0
         with:
           allowUserToSpecifyBranchViaLabel: 'true'
           labelPatternRequirement: 'CP v'
