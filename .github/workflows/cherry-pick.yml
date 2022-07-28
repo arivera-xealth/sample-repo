@@ -13,7 +13,7 @@ jobs:
       pull-requests: write
       statuses: read
       contents: write
-      metadata: write
+      metadata: read
     runs-on: ubuntu-latest
     name: Xealth Auto Cherry Picker
     if: github.event.pull_request.merged == true
