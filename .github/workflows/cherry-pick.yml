@@ -22,7 +22,7 @@ jobs:
       - name: test
         run: ls -la
       - name: Xealth Auto Cherry Pick
-        uses: Xealth/cherry-pick-action@v1.0.0
+        uses: Xealth/cherry-pick-action@integration
         with:
           allowUserToSpecifyBranchViaLabel: 'true'
           labelPatternRequirement: 'CP v'
